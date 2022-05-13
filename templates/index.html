@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Text Summariser</title>
+
+{% endblock %}
+
+
+{% block body %}
+    
+    <div class="container">
+        <div class="header">
+            <h1>Text Summariser</h1>
+        </div>
+        
+        <div class="main">
+            <div class="input_para">
+                
+                <form action="/" method="POST">
+                    <textarea name="inputpara" id="inputarea"  placeholder="Enter your Paragraph here:"></textarea>
+                    <br>
+                    <input type="submit" value="Summary" id="btn_summary">
+                    <span class="word-count">{{count}} words</span>
+                    
+                </form>
+
+            </div>
+            <div class="output_para">
+                
+                <div class="scroll-div">
+                    <div class="scroll-object">
+                        {{para}}
+                    </div>
+                </div>
+                
+
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
